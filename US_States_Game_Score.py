@@ -44,3 +44,8 @@ class Score(Turtle):
         self.clear()
         self.update_score()
     
+    def win_condition(self):
+        
+        self.penup()
+        self.goto(0,0)
+        self.write("Congratulations you guessed all 50 correctly", align="center",font=("Arial",16,"normal"))
