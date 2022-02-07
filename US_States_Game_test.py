@@ -5,8 +5,8 @@ Created on Mon Feb  7 15:36:17 2022
 @author: wajee
 """
 
-MAP_PATH = "C:/Users/wajee/.spyder-py3/us-states-game-start/us-states-game-start/blank_states_img.gif"
-STATES_PATH = "C:/Users/wajee/.spyder-py3/us-states-game-start/us-states-game-start/50_states.csv" 
+MAP_PATH = "map_path"
+STATES_PATH = "csv file path"  #Absolute or relative
 
 import pandas as pd
 import turtle
