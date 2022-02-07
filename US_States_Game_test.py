@@ -28,7 +28,9 @@ screen.bgpic(MAP_PATH)
 
 score = Score()
 
+counter = 0
 game_is_on =True
+
 
 while game_is_on:
     
@@ -37,6 +39,12 @@ while game_is_on:
     
     row_data = data[data.state == country_name]
     
+    if (counter == 50):
+        
+        score.win_condition()
+        game_is_on = False
+        
+        
     if (row_data.empty):
         
        game_is_on = False
@@ -63,11 +71,11 @@ while game_is_on:
         timmy.hideturtle()
         timmy.penup()
         timmy.goto(data_points)
-        timmy.write(f"{country_name}",font=("Arial",12,"normal"))
+        timmy.write(f"{country_name}",font=("Arial",8,"normal"))
         score.increase_score()
+        counter = counter + 1
 
         
 
 
 screen.exitonclick()
-    
